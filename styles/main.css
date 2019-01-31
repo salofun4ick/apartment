@@ -1,0 +1,386 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+    margin-bottom: 220px;
+}
+
+header nav {
+    background: #000;
+    padding: 60px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+    z-index: 2;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li {
+    margin-right: 45px;
+}
+
+header nav ul li:last-child {
+    margin-right: 0;
+}
+
+header nav ul li a {
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px;
+    transition: 1s ease;
+}
+
+header nav ul li a:hover {
+    background: #fff;
+    color: #000;
+}
+
+header .content {
+    animation: anim 15s infinite;
+    padding-top: 120px;
+    width: 100%;
+    height: 100vh;
+    
+}
+
+@keyframes anim {
+    0% {
+        background: url(../img/bg.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        
+    }
+    25% {
+        background: url(../img/bg.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        
+    }
+    50% {
+        background: url(../img/bg2.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        
+    }
+    75% {
+       background: url(../img/bg3.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        
+    }
+    100% {
+        background: url(../img/bg.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        
+    }
+    
+}
+
+.contentTittle {
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.contentTittle h1 {
+    font-size: 81px;
+    font-weight: 600;
+    letter-spacing: 22px;
+    
+}
+
+.contentTittle h5 {
+    font-size: 36px;
+    font-weight: 400;
+    letter-spacing: 8px;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.social li {
+    margin-right: 12px;
+}
+
+.social li a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 1s ease;
+    padding-bottom: 1px;
+}
+
+.social li a:hover {
+    border-bottom: 1px solid white;
+}
+
+.social li::before {
+    content: '\0338';
+    padding-right: 12px;
+    color: #fff;
+}
+
+.social li:first-child:before {
+    display: none;
+}
+
+.white-space {
+    max-width: 925px;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 140px;
+}
+
+.white-space h2 {
+    font-size: 48px;
+    letter-spacing: 10px;
+    color: #000;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 75px;
+}
+
+.white-space span {
+    display: block;
+    width: 160px;
+    height: 4px;
+    background: #000;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.white-space p {
+    font-size: 20px;
+    color: #707070;
+    border-top: 1px solid #cccccc;
+    padding-top: 50px;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-2 div {
+    text-align: center;
+}
+
+.grid-2 div img {
+    width: 100%;
+    margin-bottom: 45px;
+} 
+
+.grid-2 div h3 {
+    color: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: lighter;
+    margin-bottom: 32px;
+}
+
+.grid-2 div p {
+    font-size: 16px;
+    color: #fff;
+    margin: 0px 75px 45px 75px;
+}
+
+.grid-2 div:first-child {
+    background: #4496a1;
+}
+
+.grid-2 div:last-child {
+    background: #cee07b;
+}
+
+.welcome, .gallery, .map {
+    margin-bottom: 110px;
+}
+
+.gallery {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap; 
+}
+.gallery-item {
+    max-height: 65vh;
+}
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+}
+
+.gallery-item img:hover {
+    background: #fff;
+    opacity: .5;
+    cursor: pointer;
+}
+
+.gallery-item:first-child {
+    width: 60%;
+}
+
+.gallery-item:nth-child(2n) {
+    width: 40%;
+}
+
+.gallery-item:nth-child(3n) {
+    width: 40%;
+}
+
+.gallery-item:nth-child(4n) {
+    width: 60%;
+}
+
+.gallery-item:nth-child(5n) {
+    width: 50%;
+}
+
+.gallery-item:nth-child(6n) {
+    width: 50%;
+}
+
+#myImg {
+    transition: 0.3s;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 5; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+.modal-content {
+    padding-top: 150px;
+    margin: auto;
+    display: block;
+    width: 90%;
+    max-width: 50%;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption { 
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 200px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+
+.map iframe{
+    width: 100%;
+    height: 60vh;
+}
+
+.contact-information {
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.contact-information {
+    color: #8f8f8f;
+    margin-bottom: 105px;
+}
+
+.contact-information li {
+    margin-bottom: 15px;
+}
+
+.contact-information li:nth-child(3n) {
+    margin-bottom: 45px;
+}
+
+.contact-information a{
+    text-decoration: none;
+    color: #8f8f8f;
+}
+
+.contact-information a:hover {
+    color: #28c9d3;
+    border-bottom: 1px solid #28c9d3;
+}
+
+.contact-information .address {
+    max-width: 200px;
+    margin-left: 75px;
+} 
+
+footer p {
+    color: #8f8f8f;
+    font-size: 17px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-weight: 600;
+}
